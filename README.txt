@@ -1,0 +1,1 @@
+﻿If you are really interested in seeing the new version of the game first, then don't forget about me and subscribe to itch.io
