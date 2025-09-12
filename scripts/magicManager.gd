@@ -11,7 +11,7 @@ func add_damage(amount: float) -> void:
 	_magic.damage += amount
 
 func add_upgrade_cost() -> void:
-	_magic.upgrade_cost += 100
+	_magic.upgrade_cost += 200
 
 func get_data() -> Dictionary:
 	return {

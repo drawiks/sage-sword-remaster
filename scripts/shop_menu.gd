@@ -14,12 +14,18 @@ func _on_back_button_pressed() -> void:
 
 func _on_weapon_button_pressed() -> void:
 	$click_sound.play()
-	$panel/weapon.visible = true
+	if !$panel/weapon.visible:
+		$panel/weapon.visible = true
+	else:
+		$panel/weapon.visible = false
 	$panel/magic.visible = false
 
 func _on_magic_button_pressed() -> void:
 	$click_sound.play()
-	$panel/magic.visible = true
+	if !$panel/magic.visible:
+		$panel/magic.visible = true
+	else:
+		$panel/magic.visible = false
 	$panel/weapon.visible = false
 
 func _process(delta: float) -> void:
@@ -30,6 +36,7 @@ func _process(delta: float) -> void:
 	$panel/points.text = "points: %.1f" % PointsManager.get_points()
 	
 	$panel/weapon/damage_stats.text = "damage: %.1f" % weapon.damage
+	$panel/weapon/crit_chance_stats.text = "crit chance: %.1f" % weapon.crit_chance
 	$panel/weapon/upgrade_cost_stats.text = "upgrade cost: %.1f" % weapon.upgrade_cost
 	
 	$panel/magic/damage_stats.text = "damage: %.1f" % magic.damage

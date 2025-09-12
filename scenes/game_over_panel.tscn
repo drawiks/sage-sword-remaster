@@ -1,0 +1,58 @@
+[gd_scene load_steps=5 format=3 uid="uid://bum5lix4ns7ao"]
+
+[ext_resource type="Script" uid="uid://cnfdebs6po0yk" path="res://scripts/game_over_panel.gd" id="1_aa1li"]
+[ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="1_khxlv"]
+[ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="2_aa1li"]
+[ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="4_ydnye"]
+
+[node name="game_over_panel" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -320.0
+offset_right = 640.0
+offset_bottom = 320.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_aa1li")
+
+[node name="game_over" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -286.0
+offset_right = 286.0
+offset_bottom = 141.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_khxlv")
+theme_override_font_sizes/font_size = 140
+text = "GAME OVER"
+
+[node name="back" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -175.0
+offset_top = -100.0
+offset_right = 175.0
+offset_bottom = -30.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_aa1li")
+theme_override_font_sizes/font_size = 40
+action_mode = 0
+text = "Back"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ydnye")
+bus = &"Sounds"
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]

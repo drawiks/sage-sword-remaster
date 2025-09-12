@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhwqhvwsr3uef"
-path="res://.godot/imported/cloud_lonely.png-a18c75c64572b1d0f7e4eb4ec7cfbe9f.ctex"
+uid="uid://u67nqv4v3e6j"
+path="res://.godot/imported/clouds_mg_3.png-ddaee928c755f6099fe036a472119444.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/layers/cloud_lonely.png"
-dest_files=["res://.godot/imported/cloud_lonely.png-a18c75c64572b1d0f7e4eb4ec7cfbe9f.ctex"]
+source_file="res://assets/backgrounds/menu/layers/clouds_mg_3.png"
+dest_files=["res://.godot/imported/clouds_mg_3.png-ddaee928c755f6099fe036a472119444.ctex"]
 
 [params]
 

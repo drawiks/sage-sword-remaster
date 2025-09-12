@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b3h475p31a6u6" path="res://scripts/main_menu.gd" id="1_bqqt6"]
 [ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="1_ekxnf"]
 [ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="2_bqqt6"]
-[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_wu84c"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/menu_background.tscn" id="2_wu84c"]
 [ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="6_rtw2f"]
 
 [node name="main_menu" type="Control"]
@@ -23,6 +23,7 @@ offset_bottom = 1080.0
 [node name="background" parent="panel" instance=ExtResource("2_wu84c")]
 
 [node name="sage_sword" type="Label" parent="panel"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 618.0
 offset_top = 192.0

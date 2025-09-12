@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://u67nqv4v3e6j"
-path="res://.godot/imported/clouds_mg_3.png-84db73ec1932c621ebe1735ec747a002.ctex"
+uid="uid://dxpf2r267o4qa"
+path="res://.godot/imported/Golem_1_die.png-019174326050fc1ae670b018e3b3a7f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/background/layers/clouds_mg_3.png"
-dest_files=["res://.godot/imported/clouds_mg_3.png-84db73ec1932c621ebe1735ec747a002.ctex"]
+source_file="res://assets/enemy/Golem_1_die.png"
+dest_files=["res://.godot/imported/Golem_1_die.png-019174326050fc1ae670b018e3b3a7f2.ctex"]
 
 [params]
 

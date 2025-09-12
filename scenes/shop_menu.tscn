@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://cvfycsvwp6sl6" path="res://scripts/shop_menu.gd" id="1_1ltno"]
 [ext_resource type="FontFile" uid="uid://ebrvr7kpbexp" path="res://assets/fonts/IBMPlexSans-Bold.ttf" id="2_1ltno"]
 [ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="2_76m3e"]
-[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_bq4yc"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/menu_background.tscn" id="2_bq4yc"]
 [ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="3_cql4u"]
 [ext_resource type="PackedScene" uid="uid://bhgw8qohbr7ec" path="res://scenes/weapon_menu.tscn" id="4_cql4u"]
 [ext_resource type="PackedScene" uid="uid://dffphc2l2ftl1" path="res://scenes/magic_menu.tscn" id="5_xw4en"]
@@ -70,6 +70,7 @@ text = "Coming soon.."
 flat = true
 
 [node name="shop" type="Label" parent="panel"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -89,6 +90,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="points" type="Label" parent="panel"]
+texture_filter = 1
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

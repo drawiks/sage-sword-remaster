@@ -1,11 +1,14 @@
-[gd_scene load_steps=2 format=3 uid="uid://dffphc2l2ftl1"]
+[gd_scene load_steps=4 format=3 uid="uid://dffphc2l2ftl1"]
 
 [ext_resource type="FontFile" uid="uid://bjbfk02ndylj5" path="res://assets/fonts/JetBrainsMono-Medium.ttf" id="1_l5lfi"]
+[ext_resource type="Script" uid="uid://d3jkm56fxmsbk" path="res://scripts/magic_menu.gd" id="1_rsxvc"]
+[ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="3_xjnya"]
 
 [node name="magic" type="Panel"]
 offset_right = 1820.0
 offset_bottom = 660.0
 size_flags_horizontal = 0
+script = ExtResource("1_rsxvc")
 
 [node name="damage_stats" type="Label" parent="."]
 layout_mode = 0
@@ -19,6 +22,7 @@ text = "damage: "
 vertical_alignment = 1
 
 [node name="upgrade_cost_stats" type="Label" parent="."]
+layout_mode = 0
 offset_left = 70.0
 offset_top = 330.0
 offset_right = 670.0
@@ -45,3 +49,9 @@ theme_override_fonts/font = ExtResource("1_l5lfi")
 theme_override_font_sizes/font_size = 45
 action_mode = 0
 text = "upgrade"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_xjnya")
+bus = &"Sounds"
+
+[connection signal="pressed" from="upgrade" to="." method="_on_upgrade_pressed"]

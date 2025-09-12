@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c7fgsxtehr4ka"]
 
 [ext_resource type="Script" uid="uid://c531uxb6rwx05" path="res://scripts/game_menu.gd" id="1_ldg7d"]
-[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_aru3y"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/menu_background.tscn" id="2_aru3y"]
 [ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="3_0b27c"]
 [ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="4_yr8n5"]
 [ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="5_u3xmg"]
@@ -23,6 +23,7 @@ offset_bottom = 1080.0
 [node name="background" parent="panel" instance=ExtResource("2_aru3y")]
 
 [node name="choose_game_mode" type="Label" parent="panel"]
+texture_filter = 1
 layout_mode = 0
 offset_left = 618.0
 offset_top = 192.0

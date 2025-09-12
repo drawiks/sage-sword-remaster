@@ -10,11 +10,21 @@ func _init() -> void:
 func add_damage(amount: float) -> void:
 	_weapon.damage += amount
 
+func add_crit_chance(amount: float) -> void:
+	_weapon.crit_chance += amount
+
 func add_upgrade_cost() -> void:
-	_weapon.upgrade_cost += 100
+	_weapon.upgrade_cost += 200
 
 func get_data() -> Dictionary:
 	return {
 		"damage":_weapon.damage,
-		"upgrade_cost":_weapon.upgrade_cost
+		"upgrade_cost":_weapon.upgrade_cost,
+		"crit_chance":_weapon.crit_chance
 	}
+
+func calculate_damage(damage: int, crit_chance: float, crit_multiplier: float = 1.8) -> int:
+	var roll = randf_range(0.0, 100.0)
+	if roll < crit_chance:
+		return int(damage * crit_multiplier)
+	return damage
