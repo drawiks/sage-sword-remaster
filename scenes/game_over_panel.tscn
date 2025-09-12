@@ -33,6 +33,44 @@ theme_override_fonts/font = ExtResource("1_khxlv")
 theme_override_font_sizes/font_size = 140
 text = "GAME OVER"
 
+[node name="points_earned" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.333
+anchor_right = 0.5
+anchor_bottom = 0.333
+offset_left = -171.5
+offset_top = -33.12
+offset_right = 171.5
+offset_bottom = 32.88
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_aa1li")
+theme_override_font_sizes/font_size = 50
+text = "points earned: "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="points" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.333
+anchor_right = 0.5
+anchor_bottom = 0.333
+offset_left = -171.5
+offset_top = 56.88
+offset_right = 171.5
+offset_bottom = 122.88
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_khxlv")
+theme_override_font_sizes/font_size = 80
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="back" type="Button" parent="."]
 layout_mode = 1
 anchors_preset = 7
