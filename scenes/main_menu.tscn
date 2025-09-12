@@ -1,0 +1,73 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqurqkuitj5bv"]
+
+[ext_resource type="Script" uid="uid://b3h475p31a6u6" path="res://scripts/main_menu.gd" id="1_bqqt6"]
+[ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="1_ekxnf"]
+[ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_wu84c"]
+[ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="6_rtw2f"]
+
+[node name="main_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bqqt6")
+
+[node name="panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="background" parent="panel" instance=ExtResource("2_wu84c")]
+
+[node name="sage_sword" type="Label" parent="panel"]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 192.0
+offset_right = 1297.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("1_ekxnf")
+theme_override_font_sizes/font_size = 140
+text = "SAGE SWORD"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="play_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 520.0
+offset_right = 1200.0
+offset_bottom = 610.0
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 45
+text = "Play"
+
+[node name="shop_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 630.0
+offset_right = 1200.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 45
+text = "Shop"
+
+[node name="quit_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 750.0
+offset_right = 1200.0
+offset_bottom = 840.0
+theme_override_fonts/font = ExtResource("2_bqqt6")
+theme_override_font_sizes/font_size = 45
+text = "Quit"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rtw2f")
+bus = &"Sounds"
+
+[connection signal="pressed" from="panel/play_button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="panel/shop_button" to="." method="_on_shop_button_pressed"]
+[connection signal="pressed" from="panel/quit_button" to="." method="_on_quit_button_pressed"]

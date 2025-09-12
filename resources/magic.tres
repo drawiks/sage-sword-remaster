@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Magic" load_steps=2 format=3 uid="uid://bnes5kmdmyu7o"]
+
+[ext_resource type="Script" uid="uid://57dbh6yflcj" path="res://resources/magic.gd" id="1_4m8x0"]
+
+[resource]
+script = ExtResource("1_4m8x0")
+magic_damage = 60.0
+magic_upgrade_cost = 200.0
+metadata/_custom_type_script = "uid://57dbh6yflcj"

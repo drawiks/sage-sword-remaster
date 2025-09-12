@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="Points" load_steps=2 format=3 uid="uid://ew43da1t6kfc"]
+
+[ext_resource type="Script" uid="uid://d2vr4dayxkjpk" path="res://resources/points.gd" id="1_g55du"]
+
+[resource]
+script = ExtResource("1_g55du")
+points = 10000
+metadata/_custom_type_script = "uid://d2vr4dayxkjpk"

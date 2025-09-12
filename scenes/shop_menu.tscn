@@ -1,0 +1,149 @@
+[gd_scene load_steps=9 format=3 uid="uid://d1nsf52ndx5by"]
+
+[ext_resource type="Script" uid="uid://cvfycsvwp6sl6" path="res://scripts/shop_menu.gd" id="1_1ltno"]
+[ext_resource type="FontFile" uid="uid://ebrvr7kpbexp" path="res://assets/fonts/IBMPlexSans-Bold.ttf" id="2_1ltno"]
+[ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="2_76m3e"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_bq4yc"]
+[ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="3_cql4u"]
+[ext_resource type="PackedScene" uid="uid://bhgw8qohbr7ec" path="res://scenes/weapon_menu.tscn" id="4_cql4u"]
+[ext_resource type="PackedScene" uid="uid://dffphc2l2ftl1" path="res://scenes/magic_menu.tscn" id="5_xw4en"]
+[ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="8_lngpu"]
+
+[node name="shop_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1ltno")
+
+[node name="panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="background" parent="panel" instance=ExtResource("2_bq4yc")]
+
+[node name="top_bar" type="Panel" parent="panel"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 110.0
+
+[node name="weapon_button" type="Button" parent="panel/top_bar"]
+layout_mode = 0
+offset_left = 10.0
+offset_top = 5.0
+offset_right = 630.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("2_1ltno")
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+action_mode = 0
+text = "Weapon"
+flat = true
+
+[node name="magic_button" type="Button" parent="panel/top_bar"]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 5.0
+offset_right = 1260.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("2_1ltno")
+theme_override_font_sizes/font_size = 40
+toggle_mode = true
+action_mode = 0
+text = "Magic"
+flat = true
+
+[node name="coming_soon_button" type="Button" parent="panel/top_bar"]
+layout_mode = 0
+offset_left = 1280.0
+offset_top = 5.0
+offset_right = 1900.0
+offset_bottom = 105.0
+theme_override_fonts/font = ExtResource("2_1ltno")
+theme_override_font_sizes/font_size = 40
+disabled = true
+action_mode = 0
+text = "Coming soon.."
+flat = true
+
+[node name="shop" type="Label" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -135.0
+offset_top = -409.5
+offset_right = 135.0
+offset_bottom = -264.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_76m3e")
+theme_override_font_sizes/font_size = 140
+text = "SHOP"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="points" type="Label" parent="panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -840.0
+offset_top = -409.0
+offset_right = -290.0
+offset_bottom = -264.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("2_76m3e")
+theme_override_font_sizes/font_size = 85
+text = "points: "
+vertical_alignment = 1
+
+[node name="weapon" parent="panel" instance=ExtResource("4_cql4u")]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 290.0
+offset_right = 1870.0
+offset_bottom = 950.0
+
+[node name="magic" parent="panel" instance=ExtResource("5_xw4en")]
+visible = false
+layout_mode = 0
+offset_left = 50.0
+offset_top = 290.0
+offset_right = 1870.0
+offset_bottom = 950.0
+
+[node name="back_button" type="Button" parent="panel"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -240.0
+offset_top = -110.0
+offset_right = 240.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("3_cql4u")
+theme_override_font_sizes/font_size = 45
+text = "Back"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lngpu")
+bus = &"Sounds"
+
+[connection signal="pressed" from="panel/top_bar/weapon_button" to="." method="_on_weapon_button_pressed"]
+[connection signal="pressed" from="panel/top_bar/magic_button" to="." method="_on_magic_button_pressed"]
+[connection signal="toggled" from="panel/top_bar/magic_button" to="." method="_on_magic_button_toggled"]
+[connection signal="pressed" from="panel/back_button" to="." method="_on_back_button_pressed"]

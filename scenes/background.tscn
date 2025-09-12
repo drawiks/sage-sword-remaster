@@ -1,0 +1,105 @@
+[gd_scene load_steps=11 format=3 uid="uid://bn81f1dt7a00n"]
+
+[ext_resource type="Texture2D" uid="uid://cvibywsw4bchl" path="res://assets/background/layers/sky.png" id="1_6vm3t"]
+[ext_resource type="Script" uid="uid://dmtvjycq1ewrh" path="res://scripts/background.gd" id="1_8efq7"]
+[ext_resource type="Texture2D" uid="uid://cb8ti1pbc8iux" path="res://assets/background/layers/sky_lightened.png" id="2_8efq7"]
+[ext_resource type="Texture2D" uid="uid://d022dvkusbtkm" path="res://assets/background/layers/glacial_mountains.png" id="3_da6cc"]
+[ext_resource type="Texture2D" uid="uid://c6l6vw3amst1y" path="res://assets/background/layers/clouds_bg.png" id="4_b6e46"]
+[ext_resource type="Texture2D" uid="uid://bs044at0aaa4r" path="res://assets/background/layers/glacial_mountains_lightened.png" id="5_td6w2"]
+[ext_resource type="Texture2D" uid="uid://u67nqv4v3e6j" path="res://assets/background/layers/clouds_mg_3.png" id="6_r2thq"]
+[ext_resource type="Texture2D" uid="uid://118kaal73b72" path="res://assets/background/layers/clouds_mg_2.png" id="7_0470j"]
+[ext_resource type="Texture2D" uid="uid://bba5r0mug7nhd" path="res://assets/background/layers/clouds_mg_1_lightened.png" id="8_ivgg2"]
+[ext_resource type="Texture2D" uid="uid://dhwqhvwsr3uef" path="res://assets/background/layers/cloud_lonely.png" id="9_r4ipc"]
+
+[node name="background" type="ParallaxBackground"]
+script = ExtResource("1_8efq7")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+texture_filter = 2
+position = Vector2(-1, 0)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("1_6vm3t")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.9, 0.9)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer2"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("2_8efq7")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer3"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("3_da6cc")
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.7, 0.7)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer5"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("4_b6e46")
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer4"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("5_td6w2")
+
+[node name="ParallaxLayer7" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.5, 0.5)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer7"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("6_r2thq")
+
+[node name="ParallaxLayer8" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.4, 0.4)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer8"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("7_0470j")
+
+[node name="ParallaxLayer9" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer9"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("8_ivgg2")
+
+[node name="ParallaxLayer10" type="ParallaxLayer" parent="."]
+texture_filter = 2
+motion_scale = Vector2(0.2, 0.2)
+motion_mirroring = Vector2(1920, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer10"]
+position = Vector2(960, 540)
+scale = Vector2(5, 5)
+texture = ExtResource("9_r4ipc")
