@@ -1,0 +1,76 @@
+[gd_scene load_steps=6 format=3 uid="uid://c7fgsxtehr4ka"]
+
+[ext_resource type="Script" uid="uid://c531uxb6rwx05" path="res://scripts/game_menu.gd" id="1_ldg7d"]
+[ext_resource type="PackedScene" uid="uid://bn81f1dt7a00n" path="res://scenes/background.tscn" id="2_aru3y"]
+[ext_resource type="FontFile" uid="uid://di2n68my14jww" path="res://assets/fonts/Jersey20-Regular.ttf" id="3_0b27c"]
+[ext_resource type="FontFile" uid="uid://dkxrbsilqoqr6" path="res://assets/fonts/IBMPlexSans-Medium.ttf" id="4_yr8n5"]
+[ext_resource type="AudioStream" uid="uid://mhuf6khv5u2t" path="res://assets/sounds/click.mp3" id="5_u3xmg"]
+
+[node name="game_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ldg7d")
+
+[node name="panel" type="Panel" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="background" parent="panel" instance=ExtResource("2_aru3y")]
+
+[node name="choose_game_mode" type="Label" parent="panel"]
+layout_mode = 0
+offset_left = 618.0
+offset_top = 192.0
+offset_right = 1297.0
+offset_bottom = 333.0
+theme_override_fonts/font = ExtResource("3_0b27c")
+theme_override_font_sizes/font_size = 140
+text = "CHOOSE
+GAME MODE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="company_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 520.0
+offset_right = 1200.0
+offset_bottom = 610.0
+theme_override_fonts/font = ExtResource("4_yr8n5")
+theme_override_font_sizes/font_size = 45
+action_mode = 0
+text = "Company"
+
+[node name="duel_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 630.0
+offset_right = 1200.0
+offset_bottom = 720.0
+theme_override_fonts/font = ExtResource("4_yr8n5")
+theme_override_font_sizes/font_size = 45
+disabled = true
+action_mode = 0
+text = "Duel"
+
+[node name="back_button" type="Button" parent="panel"]
+layout_mode = 0
+offset_left = 720.0
+offset_top = 970.0
+offset_right = 1200.0
+offset_bottom = 1060.0
+theme_override_fonts/font = ExtResource("4_yr8n5")
+theme_override_font_sizes/font_size = 45
+text = "Back"
+
+[node name="click_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_u3xmg")
+bus = &"Sounds"
+
+[connection signal="pressed" from="panel/company_button" to="." method="_on_company_button_pressed"]
+[connection signal="pressed" from="panel/back_button" to="." method="_on_back_button_pressed"]

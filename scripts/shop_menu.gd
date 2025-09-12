@@ -2,7 +2,7 @@
 extends Control
 
 func _ready() -> void:
-	$panel/points.text = "points: %d" % PointsManager.get_points()
+	$panel/points.text = "points: %.1f" % PointsManager.get_points()
 	
 	$panel/weapon.visible = false
 	$panel/magic.visible = false
@@ -13,20 +13,24 @@ func _on_back_button_pressed() -> void:
 	get_tree().change_scene_to_file("res://scenes/main_menu.tscn")
 
 func _on_weapon_button_pressed() -> void:
-	if !$click_sound.playing:
-		$click_sound.play()
-	$panel/weapon/damage_stats.text = "damage: %.1f" % WeaponManager._weapon.weapon_damage
-	$panel/weapon/upgrade_cost_stats.text = "upgrade cost: %.1f" % WeaponManager._weapon.weapon_upgrade_cost
+	$click_sound.play()
 	$panel/weapon.visible = true
 	$panel/magic.visible = false
 
 func _on_magic_button_pressed() -> void:
-	if !$click_sound.playing:
-		$click_sound.play()
-	$panel/magic/damage_stats.text = "damage: %.1f" % MagicManager._magic.magic_damage
-	$panel/magic/upgrade_cost_stats.text = "upgrade cost: %.1f" % MagicManager._magic.magic_upgrade_cost
+	$click_sound.play()
 	$panel/magic.visible = true
 	$panel/weapon.visible = false
 
 func _process(delta: float) -> void:
-	$panel/points.text = "points: %d" % PointsManager.get_points()
+	
+	var weapon = WeaponManager.get_data()
+	var magic = MagicManager.get_data()
+	
+	$panel/points.text = "points: %.1f" % PointsManager.get_points()
+	
+	$panel/weapon/damage_stats.text = "damage: %.1f" % weapon.damage
+	$panel/weapon/upgrade_cost_stats.text = "upgrade cost: %.1f" % weapon.upgrade_cost
+	
+	$panel/magic/damage_stats.text = "damage: %.1f" % magic.damage
+	$panel/magic/upgrade_cost_stats.text = "upgrade cost: %.1f" % magic.upgrade_cost

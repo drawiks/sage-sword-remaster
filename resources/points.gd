@@ -2,4 +2,4 @@
 class_name Points
 extends Resource
 
-@export var points: int
+@export var points: float

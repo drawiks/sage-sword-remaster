@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_g55du")
-points = 10000
+points = 100000.0
 metadata/_custom_type_script = "uid://d2vr4dayxkjpk"

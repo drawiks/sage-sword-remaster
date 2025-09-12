@@ -4,6 +4,6 @@
 
 [resource]
 script = ExtResource("1_4m8x0")
-magic_damage = 60.0
-magic_upgrade_cost = 200.0
+damage = 60.0
+upgrade_cost = 200.0
 metadata/_custom_type_script = "uid://57dbh6yflcj"

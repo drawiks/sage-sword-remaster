@@ -8,10 +8,13 @@ func _init() -> void:
 	_magic = preload("res://resources/magic.tres").duplicate()
 
 func add_damage(amount: float) -> void:
-	_magic.weapon_damage += amount
+	_magic.damage += amount
 
 func add_upgrade_cost() -> void:
-	_magic.weapon_upgrade_cost += 100
+	_magic.upgrade_cost += 100
 
-func get_data() -> Array:
-	return [_magic.magic_damage, _magic.magic_upgrade_cost]
+func get_data() -> Dictionary:
+	return {
+		"damage":_magic.damage,
+		"upgrade_cost":_magic.upgrade_cost
+	}
