@@ -1,6 +1,6 @@
 <div align="center">
   <h1>⚔️ sage-sword-remaster</h1>
-  <p><em>Ремейк кликера <a href="https://github.com/drawksr/Sage-Sword-v0.1">Sage-Sword-v0.1</a> на Godot Engine</em></p>
+  <p><em>Ремейк кликера <a href="https://github.com/drawksr/Sage-Sword-v0.1"><strong>Sage-Sword-v0.1</strong></a> на Godot Engine</em></p>
 
   <img src="docs/sage-sword-remaster.png" alt="sage-sword-remaster" width="630">
 
