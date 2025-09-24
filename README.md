@@ -4,7 +4,7 @@
     <img height="20" alt="Version" src="https://img.shields.io/badge/version-1.0.0-yellow">
     <img height="20" alt="License MIT" src="https://img.shields.io/badge/license-MIT-green">
     <img height="20" alt="Status" src="https://img.shields.io/badge/status-stable--release-orange">
-    <img height="20" alt="Platform" src="https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20MacOS-lightgrey">
+    <img height="20" alt="Platform" src="https://img.shields.io/badge/platform-windows-lightgrey">
     <a href="https://github.com/drawiks/sage-sword-remaster/releases/latest">
         <img height="20" alt="Play" src="https://img.shields.io/badge/play-latest--release-red">
     </a>
