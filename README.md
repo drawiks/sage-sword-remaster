@@ -1,80 +1,74 @@
 <div align="center">
-    <h1>⚔️ sage-sword-remaster</h1>
-    <img height="20" alt="Godot" src="https://img.shields.io/badge/engine-Godot-blue">
-    <img height="20" alt="Version" src="https://img.shields.io/badge/version-1.0.0-yellow">
-    <img height="20" alt="License MIT" src="https://img.shields.io/badge/license-MIT-green">
-    <img height="20" alt="Status" src="https://img.shields.io/badge/status-stable--release-orange">
-    <img height="20" alt="Platform" src="https://img.shields.io/badge/platform-windows-lightgrey">
-    <a href="https://github.com/drawiks/sage-sword-remaster/releases/latest">
-        <img height="20" alt="Play" src="https://img.shields.io/badge/play-latest--release-red">
+  <h1>⚔️ sage-sword-remaster</h1>
+  <p><em>Ремейк классического кликера на Godot Engine</em></p>
+
+  <img src="docs/sage-sword-remaster.png" alt="sage-sword-remaster" width="630">
+
+  <p>
+    <a href="https://godotengine.org">
+      <img height="20" alt="Engine" src="https://img.shields.io/badge/engine-Godot-blue">
     </a>
-    <p><strong>sage-sword</strong> — это кликер, написанный на python (tkinter, random).</p>
-    <p><strong>sage-sword-remaster</strong> — это ремейк старой игры, полностью перенесённый на <strong>godot engine</strong>.</p>
-    <p>
-      <img src="docs/sage-sword-remaster.png" alt="sage-sword-remaster" width="630">
-    </p>
+    <img height="20" alt="Version" src="https://img.shields.io/badge/version-1.1.0-yellow">
+    <img height="20" alt="Platform" src="https://img.shields.io/badge/platform-Windows-lightgrey">
+    <a href="https://github.com/drawiks/sage-sword-remaster/releases/latest">
+      <img height="20" alt="Download" src="https://img.shields.io/badge/download-play--now-red">
+    </a>
+  </p>
 </div>
+
+<hr>
+
+<h2>🎮 Об игре</h2>
+<p>
+    <strong>sage-sword-remaster</strong> — это лёгкий и увлекательный 2D-кликер.<br>
+</p>
+
+<p>
+    Особенность ремастера — смена игрового движка, .
+</p>
 
 <hr>
 
 <h2>✨ Особенности</h2>
 <ul>
-    <li>Простая и увлекательная механика кликера</li>
-    <li>Полностью обновлённый интерфейс</li>
-    <li>Лёгкий запуск и минимальные системные требования</li>
-    <li>Ремейк с новыми фичами и перспективами развития</li>
+    <li>💡 Простая механика кликера</li>
+    <li>⚔️ Улучшаемые модификаторы атаки</li>
+    <li>👹 Новые враги каждые 10 уровней</li>
+    <li>💾 Лёгкий запуск, минимальные системные требования</li>
 </ul>
 
 <hr>
 
 <h2>📸 Скриншоты</h2>
-<p>Сюда можно вставить изображения из игры:</p>
+<div align="center">
+    <img src="https://github.com/drawiks/sage-sword-remaster/blob/main/docs/main-menu.png" alt="main menu" width="400">
+    <img src="https://github.com/drawiks/sage-sword-remaster/blob/main/docs/shop-menu.png" alt="shop menu" width="400">
+    <img src="https://github.com/drawiks/sage-sword-remaster/blob/main/docs/game-menu.png" alt="game menu" width="400">
+</div>
+
+<hr>
+
+<h2>⬇️ Скачать</h2>
 <p>
-  <img src="assets/screenshot2.png" alt="Игровой процесс" width="400">
+  👉 <a href="https://github.com/drawiks/sage-sword-remaster/releases/latest"><strong>Скачать последнюю версию</strong></a>
 </p>
-
-<hr>
-
-<h2>🚀 Установка и запуск</h2>
-<ol>
-    <li>Скачайте последнюю версию из раздела <a href="../../releases">Releases</a>.</li>
-    <li>Распакуйте архив.</li>
-    <li>Запустите исполняемый файл:
-        <ul>
-            <li>Windows: <code>SageSword.exe</code></li>
-            <li>Linux: <code>./SageSword.x86_64</code></li>
-            <li>MacOS: <code>SageSword.app</code></li>
-        </ul>
-    </li>
-</ol>
-
-<hr>
-
-<h2>🛠️ Сборка из исходников</h2>
-<ol>
-    <li>Установите <a href="https://godotengine.org/">Godot Engine</a> (версия 4.x).</li>
-    <li>Склонируйте репозиторий:
-        <pre><code>git clone https://github.com/drawiks/sage-sword-remaster.git</code></pre>
-    </li>
-    <li>Откройте проект через Godot и запустите сцену <code>main.tscn</code>.</li>
-</ol>
-
-<hr>
-
-<h2>📅 Roadmap</h2>
 <ul>
-    <li>[ ] Добавить систему прогресса</li>
-    <li>[ ] Улучшить анимации</li>
-    <li>[ ] Добавить новые локации</li>
-    <li>[ ] Сделать веб-версию (itch.io)</li>
+    <li>Поддерживаемая платформа: <strong>Windows</strong></li>
 </ul>
 
 <hr>
 
-<h2>🤝 Контрибьюторам</h2>
-<p>Будем рады вашим идеям и доработкам! Делайте <strong>pull request</strong> или открывайте <strong>issue</strong> с предложениями.</p>
+<h2>📅 Планы на будущее</h2>
+<ul>
+    <li>Добавить больше врагов и уровней.</li> 
+    <li>Добавить новых игровых механик.</il>
+    <li>Игровой режим дуэли.</il>
+    <li>Улучшение визуальных эффектов и анимаций.</li>
+</ul>
 
 <hr>
 
 <h2>📜 Лицензия</h2>
-<p>Проект распространяется под лицензией MIT.</p>
+<p>
+  Игра распространяется под лицензией <strong>MIT</strong>.
+</p>
