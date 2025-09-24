@@ -32,6 +32,7 @@ func _ready() -> void:
 	sprite.play("idle")
 	
 
+@warning_ignore("unused_parameter")
 func _process(delta: float) -> void:
 	$enemy_health_bar.text = "♡ %.1f" % health
 
@@ -45,7 +46,7 @@ func show_magic(damage: float):
 	magic_label.visible = true
 	magic_timer.start(0.6)
 
-func _on_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+func _on_area_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 		if hit:
 			hit = false
@@ -57,6 +58,7 @@ func _on_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 			else:
 				health -= damage
 			
+			@warning_ignore("shadowed_variable")
 			var magic = MagicManager.calculate_damage()
 			if magic > 0.0:
 				show_magic(magic)
@@ -65,6 +67,7 @@ func _on_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 			if health <= 0:
 				$enemy_health_bar.visible = false
 				$area.visible = false
+				
 				var first_number = EnemyManager.get_health() / 2
 				var second_number = first_number / 2
 				var points = randf_range(second_number, first_number)
@@ -72,6 +75,8 @@ func _on_area_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> 
 				PointsManager.earn_points(points)
 				
 				EnemyManager.add_health()
+				EnemyManager.add_level()
+				
 				if sprite.animation != "die":
 					sprite.play("die")
 			else:

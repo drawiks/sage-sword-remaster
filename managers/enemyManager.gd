@@ -10,5 +10,11 @@ func _init() -> void:
 func add_health() -> void:
 	_enemy.health += 500
 
+func add_level() -> void:
+	_enemy.level += 1
+
 func get_health() -> float:
 	return _enemy.health
+
+func get_level() -> int:
+	return _enemy.level

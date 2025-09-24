@@ -22,5 +22,5 @@ func get_data() -> Dictionary:
 func calculate_damage() -> float:
 	var roll = randf_range(0.0, 100.0)
 	if roll < _magic.chance:
-		return _magic.damage
+		return _magic.damage * 1.8
 	return 0.0

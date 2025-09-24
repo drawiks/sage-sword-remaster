@@ -12,17 +12,17 @@ config_version=5
 
 config/name="sage-sword"
 run/main_scene="res://scenes/main_menu.tscn"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/image="uid://n3mtygss5vi"
 config/icon="res://icon.svg"
 
 [autoload]
 
-PointsManager="*res://scripts/pointsManager.gd"
-WeaponManager="*res://scripts/weaponManager.gd"
-MagicManager="*res://scripts/magicManager.gd"
-AudioManager="*res://scripts/audioManager.gd"
-EnemyManager="*res://scripts/enemyManager.gd"
+PointsManager="*res://managers/pointsManager.gd"
+WeaponManager="*res://managers/weaponManager.gd"
+MagicManager="*res://managers/magicManager.gd"
+AudioManager="*res://managers/audioManager.gd"
+EnemyManager="*res://managers/enemyManager.gd"
 
 [display]
 
