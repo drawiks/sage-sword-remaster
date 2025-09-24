@@ -14,7 +14,7 @@ config/name="sage-sword"
 run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.5", "Forward Plus")
 boot_splash/image="uid://n3mtygss5vi"
-config/icon="res://icon.svg"
+config/icon="uid://cql1mf0k0wgnk"
 
 [autoload]
 
